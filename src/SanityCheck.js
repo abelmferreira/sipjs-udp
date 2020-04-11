@@ -115,7 +115,7 @@ function rfc3261_8_1_3_3() {
 function rfc3261_18_1_2() {
   var viaHost = ua.configuration.viaHost;
   var viaPort = ua.configuration.viaPort;
-  if(message.via.host !== viaHost || message.via.port !== viaPort) {
+  if(message.via.host !== viaHost || (message.via.port).toString() !== viaPort) {
     logger.warn('Via sent-by in the response does not match UA Via host value. Dropping the response');
     return false;
   }

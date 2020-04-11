@@ -786,6 +786,7 @@ module.exports = function(SIP, environment) {
                 //string to be inserted into User-Agent request header
                 userAgentString: SIP.C.USER_AGENT,
                 bind: "127.0.0.1",
+                bindport: (Math.floor(Math.random() * (Math.floor(30000) - Math.ceil(10000))) + 10000).toString(),
                 // Session parameters
                 iceCheckingTimeout: 5000,
                 noAnswerTimeout: 60,

@@ -87,7 +87,7 @@ module.exports = function(SIP, WebSocket) {
                 });
             });
 
-            this.server.bind(this.ua.configuration.uri.port, this.ua.configuration.bind);
+            this.server.bind(this.ua.configuration.bindport, this.ua.configuration.bind);
 
         },
 
